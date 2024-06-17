@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=East+Sea+Dokdo&family=Noto+Sans+KR:wght@100..900&display=swap');
 
 * {
   margin: 0;
@@ -74,32 +74,52 @@ li {
   z-index: 2;
 }
 
-p.h1-eng {
+article {
+  width: 100%;
   position: absolute;
   top: calc(80% - 100px);
-  width: 100%;
-  font-size: 35px;
+  right: 100px;
   z-index: 3;
+  transition: 0.2s;
+}
+
+h1 {
+  position: relative;
+  font-size: 38px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 1.5px;
   color: #fff;
   text-align: right;
-  padding-right: 150px;
+  transition: .5s;
+  overflow: hidden;
 }
 
-h1.h1-kor {
+.h1-eng span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: 0.5s;
+  text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
+}
+
+.h1-eng span:nth-of-type(3),
+.h1-eng span:nth-of-type(10),
+.h1-eng span:nth-of-type(14),
+.h1-eng span:nth-of-type(26) {
+  width: 10px;
+}
+
+.h1-kor {
   position: absolute;
-  top: calc(80% - 50px);
+  top: 50px;
   width: 100%;
-  font-size: 35px;
+  font-size: 60px;
   z-index: 3;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "East Sea Dokdo", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
   color: #fff;
   text-align: right;
-  padding-right: 150px;
 }
 
 .login-section__container {
@@ -154,6 +174,7 @@ h1.h1-kor {
 
 .sublogo {
   font-size: 15px;
+  font-weight: 500;
 }
 
 .login-input {
@@ -242,7 +263,7 @@ select:valid {
 }
 
 .notice .notice__copyright {
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
   margin-top: 50px;
 }
@@ -349,7 +370,9 @@ select:valid {
   }
 
   .notice .notice__copyright {
-    font-size: 11px;
+    font-size: 10px;
+    width: 90%;
+    margin-left: 5%;
   }
 
 }
