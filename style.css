@@ -126,7 +126,7 @@ h1 {
   background-color: #fff;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 60%;
   transition: 1s;
   animation: textEffect 1.2s ease;
   opacity: 0;
@@ -144,7 +144,7 @@ h1 {
 
 @keyframes textEffect {
   0% {
-    left: 60%;
+    left: 58%;
     opacity: 1;
   }
 
@@ -158,13 +158,6 @@ h1 {
   }
 }
 
-.h1-kor span:nth-of-type(5),
-.h1-kor span:nth-of-type(7),
-.h1-kor span:nth-of-type(10),
-.h1-kor span:nth-of-type(14),
-.h1-kor span:nth-of-type(20) {
-  width: 10px;
-}
 
 .login-section__container {
   position: absolute;
