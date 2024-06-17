@@ -85,7 +85,7 @@ article {
 
 h1 {
   position: relative;
-  font-size: 38px;
+  font-size: 40px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -110,16 +110,29 @@ h1 {
 }
 
 .h1-kor {
-  position: absolute;
   top: 50px;
   width: 100%;
   font-size: 60px;
-  z-index: 3;
   font-family: "East Sea Dokdo", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
   color: #fff;
   text-align: right;
+  overflow: hidden;
+}
+
+.h1-kor span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: .5s;
+}
+
+.h1-kor span:nth-of-type(5),
+.h1-kor span:nth-of-type(7),
+.h1-kor span:nth-of-type(10),
+.h1-kor span:nth-of-type(14),
+.h1-kor span:nth-of-type(20) {
+  width: 10px;
 }
 
 .login-section__container {
@@ -298,11 +311,11 @@ select:valid {
 }
 
 @media screen and (max-width: 1400px) {
-  p.h1-eng {
+  .h1-eng {
     display: none;
   }
 
-  h1.h1-kor {
+  .h1-kor {
     display: none;
   }
 

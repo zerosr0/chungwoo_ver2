@@ -14,9 +14,9 @@
     <ul class="panels">
       <li><img class="main-bg" src="./image/main_bg1.jpg" alt=""></li>
       <li><img class="main-bg" src="./image/main_bg2.jpg" alt=""></li>
-      <li><img class="main-bg" src="./image/main_bg12.jpg" alt=""></li>
+      <li><img class="main-bg" src="./image/main_bg3.jpg" alt=""></li>
     </ul>
-    <div class="mobile-panel"><img src="./image/main_bg3.jpg" alt=""></div>
+    <div class="mobile-panel"><img src="./image/main_bg4.jpg" alt=""></div>
     <div class="main-bg__filter"></div>
     <article>
       <h1 class="h1-eng"><span>We create the first-class quality</span></h1>
@@ -47,34 +47,44 @@
     const bgMobile = document.querySelector('.bgMobile');
     const panels = document.querySelectorAll('.panels li');
 
+
+
+    let h1 = document.querySelector('h1');
+    let engTxt = h1.innerText;
+    let h1Kor = document.querySelector('.h1-kor');
+    let korTxt = h1Kor.innerText;
+    let engTags = '';
+    let korTags = '';
+
     const len = panels.length - 1;
     const interval = 4000;
     let vsNum = 0;
     let timer = null;
 
-    let h1 = document.querySelector('h1');
-    let txt = h1.innerText;
-    let h1Kor = document.querySelector('.h1-eng').innerHTML;
-    let tags = '';
+    for (const el of engTxt) engTags += `<span>${el}</span>`;
+    h1.innerHTML = engTags;
+    for (const el of korTxt) korTags += `<span>${el}</span>`;
+    h1Kor.innerHTML = korTags;
 
-    for (const el of txt) tags += `<span>${el}</span>`;
-    h1.innerHTML = tags;
-
-    const span = h1.querySelectorAll('span');
-    console.log(span);
-    span.forEach((el, idx) => {
+    const engSpan = h1.querySelectorAll('span');
+    const korSpan = h1Kor.querySelectorAll('span');
+    engSpan.forEach((el, idx) => {
+      el.style.transitionDelay = 0.03 * idx + 's';
+    });
+    korSpan.forEach((el, idx) => {
       el.style.transitionDelay = 0.03 * idx + 's';
     });
 
     window.onload = () => {
       startRolling();
-      setTimeout(textEffect, 0)
+      textEffect();
     };
 
 
     //글자 애니메이션
     function textEffect() {
-      span.forEach(span => span.style.transform = "translateY(0%)");
+      engSpan.forEach(span => span.style.transform = "translateY(0%)");
+      korSpan.forEach(span => span.style.transform = "translateY(0%)");
     }
 
 
