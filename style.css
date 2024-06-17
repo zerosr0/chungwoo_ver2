@@ -99,7 +99,7 @@ h1 {
   display: inline-block;
   transform: translateY(100%);
   transition: 0.5s;
-  text-shadow: 5px 5px 0px rgba(255, 255, 255, 0.5);
+  text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.5);
 }
 
 .h1-eng span:nth-of-type(3),
@@ -110,21 +110,52 @@ h1 {
 }
 
 .h1-kor {
-  top: 50px;
+  position: relative;
+  display: inline-block;
+  top: 0px;
+  overflow: hidden;
   width: 100%;
-  font-size: 60px;
+  text-align: right;
+}
+
+.h1-kor::before {
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transition: 1s;
+  animation: textEffect 1.2s ease;
+  opacity: 0;
+}
+
+.h1-kor span {
+  font-size: 65px;
   font-family: "East Sea Dokdo", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
   color: #fff;
   text-align: right;
-  overflow: hidden;
+  transition: 0.2s 0.3s;
 }
 
-.h1-kor span {
-  display: inline-block;
-  transform: translateY(100%);
-  transition: .5s;
+@keyframes textEffect {
+  0% {
+    left: 60%;
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 .h1-kor span:nth-of-type(5),
