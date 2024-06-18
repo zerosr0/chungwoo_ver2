@@ -77,7 +77,7 @@ li {
 article {
   width: 100%;
   position: absolute;
-  top: calc(80% - 100px);
+  top: calc(80% - 60px);
   right: 100px;
   z-index: 3;
   transition: 0.2s;
@@ -99,48 +99,16 @@ h1 {
   display: inline-block;
   transform: translateY(100%);
   transition: 0.5s;
-  text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.5);
 }
 
-.h1-eng span:nth-of-type(3),
 .h1-eng span:nth-of-type(10),
-.h1-eng span:nth-of-type(14),
-.h1-eng span:nth-of-type(26) {
+.h1-eng span:nth-of-type(20),
+.h1-eng span:nth-of-type(29),
+.h1-eng span:nth-of-type(37),
+.h1-eng span:nth-of-type(43) {
   width: 10px;
 }
 
-.h1-kor {
-  position: relative;
-  display: inline-block;
-  top: 0px;
-  overflow: hidden;
-  width: 100%;
-  text-align: right;
-}
-
-.h1-kor::before {
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: 0;
-  left: 60%;
-  transition: 1s;
-  animation: textEffect 1.2s ease;
-  opacity: 0;
-}
-
-.h1-kor span {
-  font-size: 65px;
-  font-family: "East Sea Dokdo", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: #fff;
-  text-align: right;
-  transition: 0.2s 0.3s;
-}
 
 @keyframes textEffect {
   0% {
@@ -308,11 +276,11 @@ select:valid {
 
 @keyframes logoSizeChange {
   0% {
-    transform: scale(2);
+    transform: scale(1.6);
   }
 
   20% {
-    transform: scale(2);
+    transform: scale(1.6);
   }
 
   100% {
@@ -344,7 +312,7 @@ select:valid {
   }
 
   .main-bg {
-    object-position: 200px 10%;
+    object-position: 10%;
   }
 
   .login-section__container {
