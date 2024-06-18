@@ -18,9 +18,6 @@
     </ul>
     <div class="mobile-panel"><img src="./image/main_bg4.jpg" alt=""></div>
     <div class="main-bg__filter"></div>
-    <article>
-      <h1 class="h1-eng">Preferred Fastening Solution partner Since 1991</h1>
-    </article>
     <div class="login-section__container">
       <div class="login-section">
         <p class="logo__container"><img src="image/logo.png" alt="logo"></p><span class="sublogo"><img
@@ -48,34 +45,15 @@
     const bgMobile = document.querySelector('.bgMobile');
     const panels = document.querySelectorAll('.panels li');
 
-    //오른쪽 슬로건
-    let h1 = document.querySelector('h1');
-    let engTxt = h1.innerText;
-    let engTags = '';
-
     const len = panels.length - 1;
     const interval = 4000;
     let vsNum = 0;
     let timer = null;
 
-    for (const el of engTxt) engTags += `<span>${el}</span>`;
-    h1.innerHTML = engTags;
-
-    const engSpan = h1.querySelectorAll('span');
-    engSpan.forEach((el, idx) => {
-      el.style.transitionDelay = 0.03 * idx + 's';
-    });
 
     window.onload = () => {
       startRolling();
-      textEffect();
     };
-
-
-    //글자 애니메이션
-    function textEffect() {
-      engSpan.forEach(span => span.style.transform = "translateY(0%)");
-    }
 
 
     //패널 활성화함수

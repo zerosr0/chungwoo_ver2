@@ -70,7 +70,7 @@ li {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(124, 190, 235, 0.9), rgba(110, 87, 238, 0.4));
+  background: linear-gradient(90deg, rgba(124, 190, 235, 0.6), rgba(110, 87, 238, 0.1));
   z-index: 2;
 }
 
