@@ -70,62 +70,9 @@ li {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(124, 190, 235, 0.6), rgba(110, 87, 238, 0.1));
+  background: linear-gradient(40deg, rgba(124, 190, 235, 0.8) 10%, rgba(110, 87, 238, 0.1) 60%, transparent 90%);
   z-index: 2;
 }
-
-article {
-  width: 100%;
-  position: absolute;
-  top: calc(80% - 60px);
-  right: 100px;
-  z-index: 3;
-  transition: 0.2s;
-}
-
-h1 {
-  position: relative;
-  font-size: 40px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  color: #fff;
-  text-align: right;
-  transition: .5s;
-  overflow: hidden;
-}
-
-.h1-eng span {
-  display: inline-block;
-  transform: translateY(100%);
-  transition: 0.5s;
-}
-
-.h1-eng span:nth-of-type(10),
-.h1-eng span:nth-of-type(20),
-.h1-eng span:nth-of-type(29),
-.h1-eng span:nth-of-type(37),
-.h1-eng span:nth-of-type(43) {
-  width: 10px;
-}
-
-
-@keyframes textEffect {
-  0% {
-    left: 58%;
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
-
 
 .login-section__container {
   position: absolute;
